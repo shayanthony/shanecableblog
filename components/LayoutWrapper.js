@@ -56,7 +56,7 @@ const LayoutWrapper = ({ children }) => {
   function HeaderGradient() {
     return (
       <div className="mx-auto max-w-6xl motion-safe:animate-rotate-colors pointer-events-none z-[-2]">
-        <div className="absolute inset-x-0 bg-gradient-to-r from-purple-300 to-purple-400  opacity-30 blur-3xl top-[-64px] h-[200px]" />
+        <div className="absolute inset-x-0 bg-gradient-to-r from-purple-300 to-purple-400  opacity-20 blur-3xl top-[-64px] h-[200px]" />
       </div>
     );
   }
