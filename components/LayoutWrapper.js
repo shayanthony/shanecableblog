@@ -1,13 +1,16 @@
 import siteMetadata from '@/data/siteMetadata'
 import headerNavLinks from '@/data/headerNavLinks'
 import Logo from '@/data/logo.svg'
+import LogoLight from '@/data/logo-light.svg'
 import Link from './Link'
 import SectionContainer from './SectionContainer'
 import Footer from './Footer'
 import MobileNav from './MobileNav'
 import ThemeSwitch from './ThemeSwitch'
+import { useTheme } from 'next-themes'
 
 const LayoutWrapper = ({ children }) => {
+  const { theme, setTheme, resolvedTheme } = useTheme()
   return (
     <>
     <HeaderGradient />
@@ -18,7 +21,7 @@ const LayoutWrapper = ({ children }) => {
             <Link href="/" aria-label={siteMetadata.headerTitle}>
               <div className="flex items-center justify-between">
                 <div className="mr-3">
-                  <Logo />
+                {resolvedTheme === 'dark' ? <Logo/> : <LogoLight/>}
                 </div>
                 {typeof siteMetadata.headerTitle === 'string' ? (
                   <div className="hidden h-6 text-2xl font-semibold sm:block">
