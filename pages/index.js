@@ -19,15 +19,26 @@ export default function Home({ posts }) {
   return (
     <>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
-      <div className="divide-y divide-gray-200 dark:divide-gray-700">
-        <div className="space-y-2 pt-6 pb-8 md:space-y-5">
-          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-            Latest
-          </h1>
-          <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
-            {siteMetadata.description}
-          </p>
+      <div>
+        <div className="divide-y divide-gray-200 dark:divide-gray-700 pb-5">
+          <div className="pt-6">
+            <h1 className="text-5xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-5xl sm:leading-10 md:text-5xl md:leading-14 pb-2">
+              Hi, I'm Shane.
+            </h1>
+            <h2 className="text-lg prose text-gray-600 dark:text-gray-400">
+              Welcome to my site, a repository of thoughts from a software developer.<br/>
+              So put the kettle on, stay a while,<br/>
+              and scroll to your hearts content.<br/>
+            </h2>
+          </div>
         </div>
+      <div>
+        <div className="space-y-2 pt-6 pb-1 md:space-y-5">
+          <h1 className="text-2xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-2xl sm:leading-10 md:text-2xl md:leading-14">
+            Latest Posts
+          </h1>
+        </div>
+        <hr className="border-gray-200 dark:border-gray-700" />
         <ul className="divide-y divide-gray-200 dark:divide-gray-700">
           {!posts.length && 'No posts found.'}
           {posts.slice(0, MAX_DISPLAY).map((frontMatter) => {
@@ -96,6 +107,7 @@ export default function Home({ posts }) {
           <NewsletterForm />
         </div>
       )}
-    </>
+    </div>
+  </>
   )
 }
