@@ -23,7 +23,7 @@ export default function Home({ posts }) {
         <div className="divide-y divide-gray-200 dark:divide-gray-700 pb-5">
           <div className="pt-6">
             <h1 className="text-5xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-5xl sm:leading-10 md:text-5xl md:leading-14 pb-2">
-              Hi, I'm Shane.
+              Hi, I'm <span className="text-violet-600">Shane</span>.
             </h1>
             <h2 className="text-lg prose text-gray-600 dark:text-gray-400">
               Welcome to my site, a repository of thoughts from a software developer.<br/>
@@ -77,7 +77,7 @@ export default function Home({ posts }) {
                       <div className="text-base font-medium leading-6">
                         <Link
                           href={`/blog/${slug}`}
-                          className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
+                          className="text-violet-500 hover:text-violet-600 dark:hover:text-violet-400"
                           aria-label={`Read "${title}"`}
                         >
                           Read more &rarr;
@@ -95,7 +95,7 @@ export default function Home({ posts }) {
         <div className="flex justify-end text-base font-medium leading-6">
           <Link
             href="/blog"
-            className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
+            className="text-violet-500 hover:text-violet-600 dark:hover:text-violet-400 duration-200 ease-in-out rounded-md sm:p-4 dark:text-gray-100 dark:hover:bg-white dark:hover:bg-opacity-10 hover:bg-black hover:bg-opacity-10"
             aria-label="all posts"
           >
             All Posts &rarr;
