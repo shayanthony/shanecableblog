@@ -25,15 +25,18 @@ export default function Home({ posts }) {
             <h1 className="text-5xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-5xl sm:leading-10 md:text-5xl md:leading-14 pb-2">
               Hi, I'm <span className="text-violet-600">Shane</span>.
             </h1>
-            <h2 className="text-lg prose text-gray-600 dark:text-gray-400">
+            <h2 className="text-lg prose text-gray-600 dark:text-gray-400 pb-3">
               Welcome to my site, a repository of thoughts from a lead software developer.<br/>
               So make a brew, stay a while,<br/>
               and scroll to your hearts content.<br/>
             </h2>
+            <h3 className="text-md prose text-violet-600 dark:text-violet-400">
+             &#127861; <a href="/about" className="pl-3 text-violet-600 dark:text-violet-400">More about me &rarr;</a>
+            </h3>
           </div>
         </div>
       <div>
-        <div className="space-y-2 pt-6 pb-1 md:space-y-5">
+        <div className="space-y-2 pt-4 pb-1 md:space-y-5">
           <h1 className="text-2xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-2xl sm:leading-10 md:text-2xl md:leading-14">
             Latest Posts
           </h1>
