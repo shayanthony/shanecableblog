@@ -30,9 +30,7 @@ export default function Home({ posts }) {
               So make a brew, stay a while,<br/>
               and scroll to your hearts content.<br/>
             </h2>
-            <h3 className="text-md prose text-violet-600 dark:text-violet-400">
-             &#127861; <a href="/about" className="pl-3 text-violet-600 dark:text-violet-400">More about me &rarr;</a>
-            </h3>
+             &#127861; <Link href="/about" className="pl-3 text-violet-500 hover:text-violet-600 dark:hover:text-violet-400 sm:p-4">More about me &rarr;</Link>
           </div>
         </div>
       <div>
