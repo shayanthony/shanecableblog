@@ -26,8 +26,8 @@ export default function Home({ posts }) {
               Hi, I'm <span className="text-violet-600">Shane</span>.
             </h1>
             <h2 className="text-lg prose text-gray-600 dark:text-gray-400">
-              Welcome to my site, a repository of thoughts from a software developer.<br/>
-              So put the kettle on, stay a while,<br/>
+              Welcome to my site, a repository of thoughts from a lead software developer.<br/>
+              So make a brew, stay a while,<br/>
               and scroll to your hearts content.<br/>
             </h2>
           </div>
