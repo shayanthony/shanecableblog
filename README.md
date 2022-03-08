@@ -11,13 +11,7 @@ Check out the documentation below to give it a spin.
 1. JS (official support)
 
 ```bash
-npx degit https://github.com/timlrx/tailwind-nextjs-starter-blog.git
-```
-
-or with TypeScript (community support)
-
-```bash
-npx degit timlrx/tailwind-nextjs-starter-blog#typescript
+npx degit https://github.com/shayanthony/shanecableblog.git
 ```
 
 2. Personalize `siteMetadata.js` (site related information)
@@ -50,10 +44,6 @@ npm run dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-## Support
-
-Using the template? Support this effort by giving a star on GitHub, sharing your own blog and giving a shoutout on Twitter or becoming a project [sponsor](https://github.com/sponsors/timlrx).
 
 ## Licence
 
