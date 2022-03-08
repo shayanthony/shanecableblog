@@ -38,10 +38,6 @@ export default function Home({ posts }) {
             <h2 className="prose pb-3 text-lg text-gray-600 dark:text-gray-400">
               Welcome to my site, a repository of thoughts from a lead software developer.
               <br />
-              So make a brew, stay a while,
-              <br />
-              and scroll to your hearts content.
-              <br />
             </h2>
             <Link
               target="_blank"

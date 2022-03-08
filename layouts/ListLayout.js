@@ -4,6 +4,7 @@ import siteMetadata from '@/data/siteMetadata'
 import { useState } from 'react'
 import Pagination from '@/components/Pagination'
 import formatDate from '@/lib/utils/formatDate'
+import { LikeButton } from '@/components/LikeButton'
 
 export default function ListLayout({ posts, title, initialDisplayPosts = [], pagination }) {
   const [searchValue, setSearchValue] = useState('')
@@ -71,6 +72,9 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
                         {tags.map((tag) => (
                           <Tag key={tag} text={tag} />
                         ))}
+                      </div>
+                      <div className="pt-10">
+                        <LikeButton slug={slug} />
                       </div>
                     </div>
                     <div className="prose max-w-none text-gray-500 dark:text-gray-400">

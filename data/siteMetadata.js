@@ -1,5 +1,5 @@
 const siteMetadata = {
-  title: "relax, you're here now.",
+  title: 'are you awake, or just daydreaming?',
   author: 'Shane Cable',
   headerTitle: 'the code void',
   description: 'A blog containing development thoughts & code snippets',
@@ -11,11 +11,11 @@ const siteMetadata = {
   image: '/static/images/avatar.png',
   socialBanner: '/static/images/twitter-card.png',
   email: 'address@yoursite.com',
-  github: 'https://github.com',
-  twitter: 'https://twitter.com/Twitter',
+  github: 'https://github.com/shayanthony',
+  twitter: 'https://twitter.com/shayanth',
   facebook: 'https://facebook.com',
   youtube: 'https://youtube.com',
-  linkedin: 'https://www.linkedin.com',
+  linkedin: 'https://www.linkedin.com/in/shayanthonyio/',
   locale: 'en-GB',
   newsletter: {
     // supports mailchimp, buttondown, convertkit, klaviyo

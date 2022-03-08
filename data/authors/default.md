@@ -4,9 +4,7 @@ avatar: /static/images/avatar.jpeg
 occupation: Lead Software Developer
 company: Raspberry Software
 email: address@yoursite.com
-twitter: https://twitter.com/Twitter
-linkedin: https://www.linkedin.com
-github: https://github.com
+twitter: https://twitter.com/shayanth
+linkedin: https://www.linkedin.com/in/shayanthonyio/
+github: https://github.com/shayanthony
 ---
-
-TODO

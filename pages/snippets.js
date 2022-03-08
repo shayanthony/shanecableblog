@@ -13,7 +13,8 @@ export default function Snippets() {
             Snippets
           </h1>
           <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
-            Showcase your snippets with a hero image (16 x 9)
+            A collection of snippets I likely reference back to on a day to day basis or something I
+            found interesting to share.
           </p>
         </div>
         <div className="container py-12">
