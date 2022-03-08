@@ -1,3 +1,0 @@
-[submodule "blog"]
-	path = data/blog
-	url = git@github.com:shayanthony/shayanthonyblog.git
