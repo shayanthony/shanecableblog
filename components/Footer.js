@@ -15,8 +15,6 @@ export default function Footer() {
         <div className="mb-2 flex space-x-2 text-sm text-gray-500 dark:text-gray-400">
           <div className="hidden md:block">{siteMetadata.author}</div>
           <div className="hidden md:block">{` • `}</div>
-          <div className="hidden md:block">{`© ${new Date().getFullYear()}`}</div>
-          <div className="hidden md:block">{` • `}</div>
           <Link href="/">{siteMetadata.title}</Link>
         </div>
       </div>
