@@ -18,7 +18,7 @@ const discussUrl = (slug) =>
 const postDateTemplate = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
 
 export default function PostLayout({ frontMatter, authorDetails, next, prev, children }) {
-  const { slug, fileName, date, title, tags } = frontMatter
+  const { slug, fileName, date, title, tags, blogArtwork } = frontMatter
 
   return (
     <>
@@ -43,8 +43,11 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                     </dd>
                   </div>
                 </dl>
-                <div>
+                <div className="pb-6">
                   <PageTitle>{title}</PageTitle>
+                </div>
+                <div className="pt-15">
+                  <Image src={blogArtwork} width="1280px" height="200px" alt="Blog Artwork" />
                 </div>
               </div>
             </header>
