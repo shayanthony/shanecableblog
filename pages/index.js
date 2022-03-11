@@ -7,6 +7,7 @@ import { getAllFilesFrontMatter } from '@/lib/mdx'
 import formatDate from '@/lib/utils/formatDate'
 import useSWR from 'swr'
 import { SiSpotify } from 'react-icons/si'
+import { LikeButton } from '@/components/LikeButton'
 
 import NewsletterForm from '@/components/NewsletterForm'
 
@@ -110,6 +111,9 @@ export default function Home({ posts }) {
                               {tags.map((tag) => (
                                 <Tag key={tag} text={tag} />
                               ))}
+                            </div>
+                            <div className="pt-5">
+                              <LikeButton slug={slug} />
                             </div>
                           </div>
                           <div className="prose max-w-none text-gray-500 dark:text-gray-400">

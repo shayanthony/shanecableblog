@@ -73,7 +73,7 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
                           <Tag key={tag} text={tag} />
                         ))}
                       </div>
-                      <div className="pt-10">
+                      <div className="pt-5">
                         <LikeButton slug={slug} />
                       </div>
                     </div>
