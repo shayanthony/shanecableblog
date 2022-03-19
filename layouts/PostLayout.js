@@ -138,6 +138,9 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                     </div>
                   )}
                 </div>
+                <div>
+                  <LikeButton slug={slug} />
+                </div>
                 <div className="pt-4 xl:pt-8">
                   <Link
                     href="/blog"
@@ -145,9 +148,6 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                   >
                     &larr; Back to the blog
                   </Link>
-                  <div className="pt-10">
-                    <LikeButton slug={slug} />
-                  </div>
                 </div>
                 <div></div>
               </footer>
