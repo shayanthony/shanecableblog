@@ -1,0 +1,27 @@
+---
+title: 'MS Dynamics CRM & Unsaved Changes'
+date: '2022-03-19'
+lastmod: '2022-03-19'
+tags: ['snippet', javascript', 'crm', 'xrm', 'microsoft', 'unsaved', 'changes']
+draft: false
+summary: 'When your CRM form appears with Unsaved Changes without doing anything.'
+images: []
+authors: ['default']
+blogArtwork: '/static/images/snippet.jpeg'
+---
+
+Have you been making Javascript changes and all of a sudden your CRM form is showing unsaved changes for some reason
+and now your user is faced with an annoying alert not of their own doing when trying to navigate away?
+
+This issue can arise for a couple of reasons, namely:
+
+1. Javascript has touched a field `onLoad` and dirtied it
+2. Javascript is running asynchronously `onSave` (such as making a AJAX/Fetch call that isn't blocking!)
+   and messing up the save event.
+
+I find it's usually the latter with me but the lovely snippet below run in the developer tools can
+help track down the fields which are causing issues.
+
+`Xrm.Page.data = Xrm.Page.data || frames[0].Xrm.Page.data || frames[1].Xrm.Page.data; Xrm.Page.data.entity.getDataXml() `
+
+[Stack Overflow Credit](https://stackoverflow.com/questions/47926862/how-to-list-all-crm-fields-which-are-dirty-in-console)
