@@ -8,10 +8,12 @@ import formatDate from '@/lib/utils/formatDate'
 import useSWR from 'swr'
 import { SiSpotify } from 'react-icons/si'
 import { LikeButton } from '@/components/LikeButton'
+import { COLLECTIVE_NOUNS } from '@/lib/constants'
 
 import NewsletterForm from '@/components/NewsletterForm'
 
 const MAX_DISPLAY = 5
+let headerNoun = 'repository'
 
 export async function getStaticProps() {
   const posts = await getAllFilesFrontMatter('blog')
@@ -19,9 +21,14 @@ export async function getStaticProps() {
   return { props: { posts } }
 }
 
+const fetchCollectiveNoun = () => {
+  return COLLECTIVE_NOUNS[Math.floor(Math.random() * COLLECTIVE_NOUNS.length)]
+}
+
 export default function Home({ posts }) {
   const fetcher = (url) => fetch(url).then((res) => res.json())
   const { data } = useSWR('/api/now-playing', fetcher)
+  const headerNoun = fetchCollectiveNoun()
 
   return (
     <>
@@ -37,7 +44,7 @@ export default function Home({ posts }) {
               .
             </h1>
             <h2 className="prose pb-3 text-lg text-gray-600 dark:text-gray-400">
-              Welcome to my site, a repository of thoughts from a lead software developer.
+              Welcome to my site, a {headerNoun} of thoughts from a lead software developer.
               <br />
             </h2>
             <Link
