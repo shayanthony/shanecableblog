@@ -5,7 +5,7 @@ const siteMetadata = {
   description: 'A blog containing development thoughts & code snippets',
   language: 'en-GB',
   theme: 'system', // system, dark or light
-  siteUrl: 'TODO',
+  siteUrl: 'https://thecodevoid.dev',
   siteRepo: 'https://github.com/shayanthony/shanecableblog',
   siteLogo: '/static/images/avatar.png',
   image: '/static/images/avatar.png',
