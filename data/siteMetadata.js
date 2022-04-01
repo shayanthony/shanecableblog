@@ -2,7 +2,7 @@ const siteMetadata = {
   title: 'are you awake, or just daydreaming?',
   author: 'Shane Cable',
   headerTitle: 'the code void',
-  description: 'A blog containing development thoughts & code snippets',
+  description: 'A software development blog from a lead software developer.',
   language: 'en-GB',
   theme: 'system', // system, dark or light
   siteUrl: 'https://thecodevoid.dev',
