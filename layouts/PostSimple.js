@@ -29,7 +29,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
               </dl>
               <div>
                 <PageTitle>{title}</PageTitle>
-                <LikeButton slug={frontMatter.slug} />
+                {/* <LikeButton slug={frontMatter.slug} /> */}
               </div>
             </div>
           </header>

@@ -119,9 +119,9 @@ export default function Home({ posts }) {
                                 <Tag key={tag} text={tag} />
                               ))}
                             </div>
-                            <div className="pt-5">
+                            {/*                             <div className="pt-5">
                               <LikeButton slug={slug} />
-                            </div>
+                            </div> */}
                           </div>
                           <div className="prose max-w-none text-gray-500 dark:text-gray-400">
                             {summary}
