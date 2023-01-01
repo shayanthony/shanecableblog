@@ -1,0 +1,112 @@
+---
+title: 'Year In Review - 2022'
+date: '2022-12-31'
+lastmod: '2022-12-31'
+tags:
+  [
+    'review',
+    'opinion',
+    'refactors',
+    'learning',
+    'remote-working',
+    'jetpack',
+    'compose',
+    'programming',
+    'coding',
+    'printing',
+    'logging',
+    'javascript',
+  ]
+draft: false
+summary: 'Looking back on what I enjoyed doing in 2022.'
+images: ['/static/images/officehue.jpg']
+authors: ['default']
+blogArtwork: '/static/images/officehue.jpg'
+---
+
+# 2022 Year In Review
+
+It's been a very interesting year for me, having done a lot of new things while also doing a lot of building upon pre-existing knowledge. My favourite things this year were infrastructure based, specifically around Amazon Web Services.
+
+# Using AWS Lambda for writing/rewriting requests from an ALB through a VPC.
+
+The task was to migrate a website to a server which the team could gain access to. Simple enough except it required some routing help as the site is located and running using localhost in a VPC on an EC2 instance.
+
+Requests to an URL would come in and an ALB (Load Balancer) would pick up on it. If a specific route was given, the ALB would
+pass the request to a new Lambda function.
+
+This lambda function takes the entire request body, changes the data to suit what the site needs and passes it on to the site without it even knowing. The lambda
+then gets the results of the request, extracts it, changes the results for the browser and sends it back to the user.
+
+The lamdba was written in Node JS and was one of the most interesting & satisfying things I did this year.
+
+For some documentation if you are interested, please see below.
+
+1. [Building Lamdba functions with Node.js](https://docs.aws.amazon.com/lambda/latest/dg/lambda-nodejs.html)
+2. [Configuring a Lambda Function to access resources in a VPC](https://docs.aws.amazon.com/lambda/latest/dg/configuration-vpc.html)
+3. [Managing external libraries in an AWS Lamdba function](https://dev.to/alim1496/managing-external-libraries-in-aws-lambda-functions-1g0m)
+
+# Cost savings using S3 gateway endpoints
+
+Essentially, if you are taking backups to go into S3 buckets that are large, don't do them through a NAT Gateway due to pricing. Ouch.
+
+Enabling S3 gateway endpoints, as long as your EC2 instances are all in the same region and on the same VPC, is essentially free.
+
+For some documentation on how to do this, see below.
+
+1. [Gateway endpoints for Amazon S3](https://docs.aws.amazon.com/vpc/latest/privatelink/vpc-endpoints-s3.html)
+
+# AWS Cloudwatch
+
+This was a relatively simple thing to do but simple is usually best. Applications had been using NLog & .NET Framework to log to Elasticsearch but utilising our AWS infrastructure, was easy to go to AWS Cloudwatch instead as Elasticsearch
+and its frequent downtime due to cluster problems was a bit of a time soak for development.
+
+For some documentation on how to do this, see below.
+
+1. [Logging .NET to Cloudwatch](https://blog.ivankahl.com/logging-dotnet-to-aws-cloudwatch-using-nlog/)
+
+2. [Sample NLog config examples and how to](https://www.c-sharpcorner.com/article/how-to-write-logs-to-amazon-cloudwatch-using-nlog-in-net-6-web-api/)
+
+# Mobile Printers & Java
+
+I have worked with three new Zebra mobile printers this year, all needing a brand new implementation with the ability to
+print different fonts, styles & images.
+
+The implementation was done using CPCL in Java for integration amongst multiple printers, a language I had not come across before and is a little more
+involved than standard line print mode.
+
+While online help & documentation is scarce, Zebra do have a manual so cling to it for dear life!
+
+1. [Zebra CPCL Manual](https://www.zebra.com/content/dam/zebra_new_ia/en-us/manuals/printers/common/programming/cpcl-pm-en.pdf)
+
+# Jetpack Compose
+
+Coming from a work life of Java sprinkled with Kotlin and XML, using Jetpack Compose has been a blast.
+
+I have my first small Play Store application releasing soon, written entirely in Compose and not having to
+touch XML & Constraint Layouts has been a blessing.
+
+The application uses Google Firebase for a multitude of solutions which includes:
+
+1. Authentication (anonymous) for creating users
+2. Firestore Database for real-time read/writing built into the application. This follows the MVVM pattern with the cloud DB, instead of Room.
+3. Admob for small banner ads (interstitial ads in Compose are not fully fleshed out yet)
+4. Firebase Messaging for real-time push notifications to users
+5. Crashlytics/Analytics for monitoring/uptime purposes
+
+The design of the application is using new Material Design 3 which gives a very nice aesthetic look to the app.
+
+# Refactors
+
+To finish on, there have also been quite a few changes to older code that needed updating/refactoring and includes:
+
+1. Moving jQuery AJAX calls to Fetch API & Async/Await patterns
+2. Updating older static sites to mobile friendlier Angular applications
+3. Implementing 3DS V2 for payment sites
+4. Improving upon a singular Android application with multiple customer modules
+5. Migrating from Microsoft SQL Reports to a bespoke front end reporting solution
+
+I am sure there are many other new things I have learnt about and may update this post in the future,
+but for now, let's see what 2023 has in store.
+
+Happy New Year!
